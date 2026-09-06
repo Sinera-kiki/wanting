@@ -18,7 +18,49 @@ useReveal()
 
 const base = import.meta.env.BASE_URL
 
-const experiences = [
+interface Metric {
+  value: string
+  label: string
+}
+
+interface Experience {
+  time: string
+  role: string
+  company: string
+  desc: string
+  metrics: Metric[]
+}
+
+interface Project {
+  num: string
+  title: string
+  org: string
+  context: string
+  actions: string[]
+  result: string
+  repo?: string
+}
+
+interface SkillCategory {
+  cat: string
+  items: string[]
+}
+
+interface PlaygroundLink {
+  label: string
+  href: string
+}
+
+interface Playground {
+  title: string
+  desc: string
+  tag: string
+  links?: PlaygroundLink[]
+  link?: string
+  featured?: boolean
+}
+
+const experiences: Experience[] = [
   {
     time: '2026.07 - 至今',
     role: 'AI 智能治理产品经理',
@@ -62,7 +104,7 @@ const experiences = [
   },
 ]
 
-const projects = [
+const projects: Project[] = [
   {
     num: 'Project 01',
     title: '专业号资质造假智能化治理',
@@ -115,7 +157,7 @@ const projects = [
   },
 ]
 
-const skills = [
+const skills: SkillCategory[] = [
   {
     cat: 'AI 工程 · AI Craft',
     items: ['Cursor / Claude Code 编程', 'Coze / Dify Agent 编排', 'Prompt 工程与 Few-shot', 'Bad Case 归因与评估'],
@@ -134,7 +176,7 @@ const skills = [
   },
 ]
 
-const playgrounds = [
+const playgrounds: Playground[] = [
   {
     title: 'MeowLog · AI 伴侣猫',
     desc: '从“用户为什么愿意每天回来”出发，设计了一只会自己生活的 AI 治愈猫：用陪伴互动、任务签到、叶子币经济与换装收藏构成轻量养成循环，让对话式 AI 拥有成长目标；猫咪离线时也会自主“生活”并在探险后写下手帐，能记住用户聊过的偏好与情绪，越用越懂你。独立完成从产品设计、玩法数值到前后端研发的全流程，已在公网稳定运行，支持手机端试玩。',
@@ -302,9 +344,6 @@ const playgrounds = [
             </ul>
           </div>
           <div class="project-result">{{ p.result }}</div>
-          <div v-if="p.links" class="play-card-links" style="margin-top: 14px;">
-            <a v-for="(l, li) in p.links" :key="li" :href="l.href" target="_blank" rel="noopener" class="play-card-link">{{ l.label }}</a>
-          </div>
           <a v-if="p.repo" :href="p.repo" target="_blank" rel="noopener" class="project-source">查看 GitHub 源码 ↗</a>
         </article>
       </div>
