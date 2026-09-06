@@ -9,7 +9,6 @@ import flowerUrl from '../assets/photos/flower.jpeg'
 import practice1Url from '../assets/photos/practice_1.jpeg'
 import practice2Url from '../assets/photos/practice_2.jpeg'
 import practice3Url from '../assets/photos/practice_3.jpeg'
-import sceneryUrl from '../assets/photos/scenery.jpeg'
 import xhsUrl from '../assets/photos/xhs_profile.jpeg'
 import xhsPost1Url from '../assets/photos/xhs_post_1.jpeg'
 import xhsPost2Url from '../assets/photos/xhs_post_2.jpeg'
@@ -385,9 +384,9 @@ const playgrounds = [
         <!-- XHS -->
         <div class="creator-card">
           <div class="xhs-gallery" aria-label="小红书运营数据截图">
-            <a :href="xhsUrl" target="_blank"><img :src="xhsUrl" alt="小红书主页数据" /></a>
-            <a :href="xhsPost1Url" target="_blank"><img :src="xhsPost1Url" alt="高中数学合集数据" /></a>
-            <a :href="xhsPost2Url" target="_blank"><img :src="xhsPost2Url" alt="校园内容数据" /></a>
+            <a :href="xhsUrl" target="_blank"><img loading="lazy" :src="xhsUrl" alt="小红书主页数据" /></a>
+            <a :href="xhsPost1Url" target="_blank"><img loading="lazy" :src="xhsPost1Url" alt="高中数学合集数据" /></a>
+            <a :href="xhsPost2Url" target="_blank"><img loading="lazy" :src="xhsPost2Url" alt="校园内容数据" /></a>
           </div>
           <h3 style="font-size: 18px; margin-bottom: 8px;">个人账号运营</h3>
           <p style="font-size: 14px; color: #555; line-height: 1.65; flex-grow: 1;">围绕学习方法与校园生活持续创作，账号现有 <strong>1199 名粉丝、累计 6.9 万赞藏</strong>。高中数学合集共 11 篇，其中单篇获得 <strong>1.8 万赞、9220 收藏</strong>；校园竞选类内容最高浏览量超过 6 万。</p>
@@ -411,9 +410,9 @@ const playgrounds = [
         <!-- Practice: 怀珠韫玉 -->
         <div class="creator-card practice-card">
           <div class="practice-gallery">
-            <img :src="practice1Url" alt="探访八一敬老院革命老战士" />
-            <img :src="practice3Url" alt="探访非遗剪纸传承人" />
-            <img :src="practice2Url" alt="街头党史宣传实践" />
+            <img loading="lazy" :src="practice1Url" alt="探访八一敬老院革命老战士" />
+            <img loading="lazy" :src="practice3Url" alt="探访非遗剪纸传承人" />
+            <img loading="lazy" :src="practice2Url" alt="街头党史宣传实践" />
           </div>
           <div class="practice-copy">
           <h3 style="font-size: 18px; margin-bottom: 8px;">延安社会实践</h3>
@@ -468,7 +467,7 @@ const playgrounds = [
       <!-- 兴趣卡片 -->
       <div class="beyond-grid">
         <div class="beyond-card life-game">
-          <img :src="wangzheUrl" class="beyond-photo" alt="王者战绩" />
+          <img loading="lazy" :src="wangzheUrl" class="beyond-photo" alt="王者战绩" />
           <div class="beyond-icon">01 · Honor of Kings</div>
           <h3 class="beyond-title">王者 2000 分 · 辅助玩家</h3>
           <p class="beyond-text">
@@ -478,8 +477,8 @@ const playgrounds = [
 
         <div class="beyond-card life-cats">
           <div class="cat-gallery">
-            <img :src="catSilverUrl" class="beyond-photo" alt="长毛银渐层" />
-            <img :src="cat2Url" class="beyond-photo" alt="白色小猫" />
+            <img loading="lazy" :src="catSilverUrl" class="beyond-photo" alt="长毛银渐层" />
+            <img loading="lazy" :src="cat2Url" class="beyond-photo" alt="白色小猫" />
           </div>
           <div class="beyond-icon">02 · Cats &amp; Dogs</div>
           <h3 class="beyond-title">猫咪观察员</h3>
@@ -498,9 +497,9 @@ const playgrounds = [
           <h3 class="beyond-title">在陌生的城市里散步</h3>
           <p class="beyond-text">旅行时喜欢慢慢走，观察街道、动线、标识和日常服务。比起打卡景点，我更在意人在真实场景中如何行动，这也训练了我从场景出发理解体验。</p>
           <div class="travel-gallery">
-            <img :src="travelUrl" class="beyond-photo" alt="海边游船" />
-            <img :src="flowerUrl" class="beyond-photo" alt="花丛中" />
-            <img :src="travel2Url" class="beyond-photo" alt="旅行照" />
+            <img loading="lazy" :src="travelUrl" class="beyond-photo" alt="海边游船" />
+            <img loading="lazy" :src="flowerUrl" class="beyond-photo" alt="花丛中" />
+            <img loading="lazy" :src="travel2Url" class="beyond-photo" alt="旅行照" />
           </div>
         </div>
 
