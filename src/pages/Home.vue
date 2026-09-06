@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import portraitUrl from '../assets/photos/avatar.jpeg'
-import wangzheUrl from '../assets/photos/wangzhe.jpeg'
-import cat2Url from '../assets/photos/cat2.jpeg'
-import catSilverUrl from '../assets/photos/cat_silver.jpeg'
-import travelUrl from '../assets/photos/travel_new.jpeg'
-import travel2Url from '../assets/photos/travel2.jpeg'
-import flowerUrl from '../assets/photos/flower.jpeg'
-import practice1Url from '../assets/photos/practice_1.jpeg'
-import practice2Url from '../assets/photos/practice_2.jpeg'
-import practice3Url from '../assets/photos/practice_3.jpeg'
-import xhsUrl from '../assets/photos/xhs_profile.jpeg'
-import xhsPost1Url from '../assets/photos/xhs_post_1.jpeg'
-import xhsPost2Url from '../assets/photos/xhs_post_2.jpeg'
+import portraitUrl from '../assets/photos/avatar.webp'
+import wangzheUrl from '../assets/photos/wangzhe.webp'
+import cat2Url from '../assets/photos/cat2.webp'
+import catSilverUrl from '../assets/photos/cat_silver.webp'
+import travelUrl from '../assets/photos/travel_new.webp'
+import travel2Url from '../assets/photos/travel2.webp'
+import flowerUrl from '../assets/photos/flower.webp'
+import practice1Url from '../assets/photos/practice_1.webp'
+import practice2Url from '../assets/photos/practice_2.webp'
+import practice3Url from '../assets/photos/practice_3.webp'
+import xhsUrl from '../assets/photos/xhs_profile.webp'
+import xhsPost1Url from '../assets/photos/xhs_post_1.webp'
+import xhsPost2Url from '../assets/photos/xhs_post_2.webp'
 import { useReveal } from '../composables/useReveal'
 
 useReveal()
@@ -188,7 +188,7 @@ const playgrounds = [
         </div>
         <div class="hero-portrait-wrap" style="position: relative;">
           <div class="hero-portrait">
-            <img :src="portraitUrl" alt="Wanting portrait" class="portrait-illust" />
+            <img fetchpriority="high" :src="portraitUrl" alt="Wanting portrait" class="portrait-illust" />
             <div class="portrait-caption">- Wanting Deng -</div>
           </div>
         </div>
