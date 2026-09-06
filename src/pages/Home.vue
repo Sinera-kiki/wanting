@@ -105,9 +105,9 @@ const projects = [
     num: 'Project 04',
     title: '简历优化与面试模拟 Agent',
     org: '阿里巴巴 · 夸克 AI 产品经理 · 2025.04 - 2025.09',
-    context: '用户输入口语化、无重点，大模型生成内容存在空洞与幻觉，且通用面试题库无法满足个性化岗位要求。',
+    context: '求职者的简历描述口语化、无重点，大模型生成内容易出现空洞与幻觉，通用面试题库也难以匹配个性化岗位要求。',
     actions: [
-      '从 0-1 设计简历优化管理流程，基于 STAR 法则设计“动作词 + 量化结果”结构化 Prompt',
+      '从 0-1 设计简历管理流程，基于 STAR 法则设计“动作词 + 量化结果”结构化 Prompt，将口语化输入收敛为规范表达',
       '建立生成质量评估与 A/B 测试机制，针对 Bad Case 运用 Few-shot 策略提升模型稳定性',
       '针对“精确匹配”与“泛化匹配”场景设计意图识别与差异化匹配 Prompt，落地沉浸式卡片问答面试交互'
     ],
@@ -147,7 +147,7 @@ const playgrounds = [
   },
   {
     title: '一周好好吃 · MealPlanner AI',
-    desc: '面向独居生活的 AI 周餐规划助手，从“想吃什么”到“买什么菜”一步到位。用户可自由勾选 1-21 餐、设置预算与忌口，由大模型结合确定性规则引擎生成动态周餐单与零损耗采购清单，支持单餐换菜、库存抵扣与跨周偏好记忆。',
+    desc: '面向独居青年的 AI 周餐规划助手，从“想吃什么”到“买什么菜”一步到位。用户可自由勾选 1-21 餐、设置预算与忌口，由大模型结合确定性规则引擎生成动态周餐单与零损耗采购清单，支持单餐换菜、库存抵扣与跨周偏好记忆。',
     tag: 'React · FastAPI · PostgreSQL · PWA · LLM 编排 + 规则引擎',
     links: [
       { label: 'GitHub 源码 ↗', href: 'https://github.com/Sinera-kiki/wanting-meal-planner' },
@@ -357,7 +357,7 @@ const playgrounds = [
       <div class="playground-grid">
         <div v-for="(play, i) in playgrounds" :key="i" style="padding: 24px; border: 1px solid rgba(217, 212, 203, 0.6); transition: all 0.3s;" class="play-card" :class="{ 'play-card-featured': play.featured }">
           <div style="font-size: 12px; color: #8DA290; margin-bottom: 8px;">{{ play.tag }}</div>
-          <h3 style="font-size: 18px; margin-bottom: 12px;">{{ play.title }}</h3>
+          <h3 class="card-title" style="margin-bottom: 12px;">{{ play.title }}</h3>
           <p style="font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 20px;">{{ play.desc }}</p>
           <div v-if="play.links" class="play-card-links">
             <a v-for="(l, li) in play.links" :key="li" :href="l.href" target="_blank" rel="noopener" class="play-card-link">{{ l.label }}</a>
@@ -388,7 +388,7 @@ const playgrounds = [
             <a :href="xhsPost1Url" target="_blank"><img loading="lazy" :src="xhsPost1Url" alt="高中数学合集数据" /></a>
             <a :href="xhsPost2Url" target="_blank"><img loading="lazy" :src="xhsPost2Url" alt="校园内容数据" /></a>
           </div>
-          <h3 style="font-size: 18px; margin-bottom: 8px;">个人账号运营</h3>
+          <h3 class="card-title" style="margin-bottom: 8px;">个人账号运营</h3>
           <p style="font-size: 14px; color: #555; line-height: 1.65; flex-grow: 1;">围绕学习方法与校园生活持续创作，账号现有 <strong>1199 名粉丝、累计 6.9 万赞藏</strong>。高中数学合集共 11 篇，其中单篇获得 <strong>1.8 万赞、9220 收藏</strong>；校园竞选类内容最高浏览量超过 6 万。</p>
           <a href="https://xhslink.cn/o/2QX17q6dgMZ" target="_blank" style="font-size: 14px; color: #222; text-decoration: underline; margin-top: 12px; display: inline-block;">查看小红书主页 ↗</a>
         </div>
@@ -403,7 +403,7 @@ const playgrounds = [
              <a href="https://mp.weixin.qq.com/s/BZJQEJj1s6_HjLhTwiDYLQ" target="_blank" class="wx-article-link">十二连｜向云端，观望军训专属色卡！ ↗</a>
              <div style="font-size: 12px; color: #999; text-align: center; margin-top: 4px;">等 50+ 篇推文</div>
           </div>
-          <h3 style="font-size: 18px; margin-bottom: 8px;">校园内容策划</h3>
+          <h3 class="card-title" style="margin-bottom: 8px;">校园内容策划</h3>
           <p style="font-size: 14px; color: #555; line-height: 1.65; flex-grow: 1;">曾任校团委宣传部主任，累计完成 50+ 篇推文与深度报道，覆盖军训专题、人物采访与研究生数模赛事。负责选题、采访、撰稿与排版，所在军训编辑部获新生宣传优胜连第一名，相关内容累计浏览 1 万+。</p>
         </div>
 
@@ -415,7 +415,7 @@ const playgrounds = [
             <img loading="lazy" :src="practice2Url" alt="街头党史宣传实践" />
           </div>
           <div class="practice-copy">
-          <h3 style="font-size: 18px; margin-bottom: 8px;">延安社会实践</h3>
+          <h3 class="card-title" style="margin-bottom: 8px;">延安社会实践</h3>
           <div style="font-size: 12px; color: #8DA290; margin-bottom: 12px;">怀珠韫玉实践团 · 队长</div>
 
           <p style="font-size: 14px; color: #555; line-height: 1.7; margin-bottom: 12px;">
