@@ -150,8 +150,8 @@ const playgrounds = [
     desc: '面向独居青年的 AI 周餐规划助手，从“想吃什么”到“买什么菜”一步到位。用户可自由勾选 1-21 餐、设置预算与忌口，由大模型结合确定性规则引擎生成动态周餐单与零损耗采购清单，支持单餐换菜、库存抵扣与跨周偏好记忆。',
     tag: 'React · FastAPI · PostgreSQL · PWA · LLM 编排 + 规则引擎',
     links: [
-      { label: 'GitHub 源码 ↗', href: 'https://github.com/Sinera-kiki/wanting-meal-planner' },
       { label: '在线体验 ↗', href: 'http://154.8.153.135' },
+      { label: 'GitHub 源码 ↗', href: 'https://github.com/Sinera-kiki/wanting-meal-planner' },
     ],
   },
   {
