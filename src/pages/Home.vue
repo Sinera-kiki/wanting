@@ -151,7 +151,7 @@ const playgrounds = [
     tag: 'React · FastAPI · PostgreSQL · PWA · LLM 编排 + 规则引擎',
     links: [
       { label: 'GitHub 源码 ↗', href: 'https://github.com/Sinera-kiki/wanting-meal-planner' },
-      { label: '真实云端部署 ↗', href: 'http://154.8.153.135' },
+      { label: '在线体验 ↗', href: 'http://154.8.153.135' },
     ],
   },
   {
